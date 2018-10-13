@@ -1,0 +1,426 @@
+/* 
+====================================
+Sets up styles for .sidebar-container 
+====================================
+*/
+
+/* GLOBAL CLASSES */
+
+.row {
+  display: flex;
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.sidebar-container {
+  background: #FAF8F0;
+  height: 100%;
+  position: fixed;
+  padding: 60px;
+  width: 220px;
+}
+
+nav {
+  top: 0;
+}
+
+nav a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #008BB7;
+}
+
+nav a:hover { 
+  color: #004760;
+  text-decoration: underline;
+}
+
+nav h2 {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.sidebar-logo {
+  width: 225px;
+}
+
+/* 
+====================================
+Sets up styles for .content-container 
+====================================
+*/
+
+/* Positions section container in relation to .sidebar-container */
+.section-container {
+  /* background: yellow; */
+  margin-top: 40px;
+  margin-left: 220px;
+  padding: 30px 30px;
+  height: 100%;
+}
+
+/* Sets max width for content and align content in middle of section-container */
+.content-container {
+  /* background: lightskyblue; */
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Sets row behavior using flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.row-container-no-wrap {
+  width: 100%;
+  display: flex;
+  /* === sets spacing between elements in container === */
+  justify-content: space-between;
+  flex-wrap: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.row-container {
+  width: 100%;
+  display: flex;
+  /* === sets spacing between elements in container === */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.row-container-around {
+  width: 100%;
+  display: flex;
+  /* === sets spacing between elements in container === */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+/* 
+====================================
+BONUS: Sets up styles for mobile breakpoint 
+====================================
+*/
+
+/* Hides mobile navigation on desktop */
+.mobile-nav {
+  /* display:none; */
+}
+
+/* Sets media query for screens below 450px wide */
+@media only screen and (max-width: 450px) {
+
+  /* Position nav at the top */
+  nav {
+      position: fixed;
+      left: 0; 
+  }
+
+  /* Shows Mobile Navigation Styles  */
+  .mobile-nav {
+      background: white;
+      width: 100%;
+      padding: 10px 30px;
+      display:flex;
+      justify-content: flex-start;
+      align-content: center;
+      height: 80px;
+      margin: 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+  /* Sets max width for logos in mobile nav */
+  .mobile-nav img {
+      height: 80px;
+  }
+
+  /* Hides Sidebar on mobile */
+  .sidebar-container {
+      display: none;
+  }
+
+  /* Defines mobile container content */
+  .section-container {
+      background: lightskyblue; 
+      margin-top: 60px;
+      margin-left: 0px;
+      height: 100%;
+  }
+
+  /* Sets Type Styles */
+  h1 {
+      font-size: 1.6em;
+  }
+
+
+  .row-container-no-wrap {
+      flex-wrap: wrap;
+  }
+
+  #Logo .section-logo {
+      width: 300px; 
+      height: 100%;
+  }
+
+
+}
+
+/* 
+====================================
+BONUS: Sets up css code snippet styles 
+====================================
+*/
+
+pre {
+  background: rgb(209, 232, 249);
+  max-height: 85px; 
+  /* === Makes content scrollable if it is taller than 85px === */
+  overflow:scroll;
+  padding: 0.5em;
+  border-radius:4px; 
+  /* === Makes inner box shadow === */
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+
+/* 
+===========================
+Sets up styles for logos 
+============================
+*/
+
+.section-logo {
+  width: 400px;
+  height: 100%;
+  padding: 25px;
+}
+
+.section-logo2 {
+  width: 400px;
+  height: 100%;
+  background-color: #444645;
+  padding: 25px;
+  margin: 10px;
+}
+
+/* 
+===========================
+Sets up styles for typography 
+============================
+*/
+
+/* Sets up font-face for body copy */ 
+body {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+/* Sets up font-face for headers */ 
+h1  {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: black;
+  font-size: 52px;
+  line-height: 1.2em; 
+}
+
+h2  {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.2em; 
+}
+
+h3  {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-size: 28px;
+  line-height: 1.2em; 
+}
+
+h4  {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-size: 24px;
+  line-height: 1.2em; 
+}
+
+h5 {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 24px;
+  line-height: 1.2em; 
+}
+
+h6 {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 18px;
+  line-height: 1.2em; 
+}
+
+
+
+/* 
+==========================
+Sets up styles for colors 
+===========================
+*/
+
+
+/* Makes a circle shape to serve a color box */ 
+.color-shape {
+  display: block;
+  text-align: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  margin: 0.5em;
+  border: 1px solid white;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.4); 
+}
+
+/* Makes colors */ 
+.color-primary-teal {
+  background: #008BB7;
+}
+
+.color-dark-teal {
+  background: #004760; 
+}
+
+.color-lt-blue {
+  background: #00C3FF;
+}
+
+.color-orange {
+  background: #F86A31;
+}
+
+.color-oily-black {
+  background: #444645;
+}
+
+.color-cream {
+  background: #FAF8F0; 
+}
+
+.color-grey {
+  background: #C0BCB1; 
+}
+
+
+/* 
+===========================
+Sets up styles for button 
+============================
+*/
+
+.button button {
+  /* height: 40px;
+  width: 120px;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600; */
+}
+
+.button-normal {
+  /* background: rgb(51, 51, 102);
+  color: rgb(255, 255, 255); */
+}
+
+.button-hover {
+  /* background: rgb(215, 215, 215);
+  color: rgb(51, 51, 102); */
+}
+
+.button-pressed,
+.button-loading {
+  /* background:rgb(215, 215, 215);
+  color:rgb(51, 51, 102);
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.4); */
+}
+
+.button-disabled {
+  /* good to go or make a custom disabled state */
+}
+
+/* 
+===========================
+PSEUDO-CLASSES: VIEW SLIDES 58-63
+============================
+*/
+
+.button:hover {
+  /* color: magenta; */
+}
+
+/* 
+==========================
+Sets up styles for icons 
+===========================
+*/
+
+/* TO ADD FONT AWESOME ICONS GO TO THIS LINK AND COPY THE CSS LINK
+https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css
+*/
+
+.imls-icons {
+  height: 40px;
+  margin: 10px;
+}
+
+/* USPS iconography */
+.usps-icons i {
+  /* margin-top: 40px;
+  font-size: 30px;
+  color:rgb(51, 51, 102); */
+}
+
+.svg-icons img {
+  /* margin-top: 40px;
+  width: 100px;
+  height: 100px; */
+}
+
+/* footer iconography */
+.social-icons i {
+  /* font-size: 44px;
+  color:tomato; */
+}
+
+.social-icons i:hover {
+  /* color: magenta; */
+}
+
+/* 
+===========================
+Sets up styles for images 
+============================
+*/
+
+#Imagery img {
+  /* padding: 10px; */
+}
+
+/* 
+====================================
+Sets up styles for articles
+====================================
+*/
+article {
+  /* margin-top: 40px;
+  margin-bottom: 60px; */
+}
+
+/* Copyright Trilogy Education Services © 2018. All Rights Reserved */
