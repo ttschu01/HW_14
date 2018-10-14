@@ -8,10 +8,12 @@ Sets up styles for .sidebar-container
 
 .row {
   display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .split {
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .sidebar-container {
@@ -19,7 +21,8 @@ Sets up styles for .sidebar-container
   height: 100%;
   position: fixed;
   padding: 60px;
-  width: 220px;
+  width: 15%;
+  max-width: 220px;
 }
 
 nav {
@@ -45,7 +48,7 @@ nav h2 {
 }
 
 .sidebar-logo {
-  width: 225px;
+  width: 100%;
 }
 
 /* 
@@ -56,11 +59,11 @@ Sets up styles for .content-container
 
 /* Positions section container in relation to .sidebar-container */
 .section-container {
-  /* background: yellow; */
   margin-top: 40px;
-  margin-left: 220px;
-  padding: 30px 30px;
+  margin-left: 24%;
+  width: 69%;
   height: 100%;
+  padding-left: 5%;
 }
 
 /* Sets max width for content and align content in middle of section-container */
@@ -110,7 +113,7 @@ BONUS: Sets up styles for mobile breakpoint
 
 /* Hides mobile navigation on desktop */
 .mobile-nav {
-  /* display:none; */
+  display:none; 
 }
 
 /* Sets media query for screens below 450px wide */
@@ -124,7 +127,7 @@ BONUS: Sets up styles for mobile breakpoint
 
   /* Shows Mobile Navigation Styles  */
   .mobile-nav {
-      background: white;
+      background: #FAF8F0;
       width: 100%;
       padding: 10px 30px;
       display:flex;
@@ -146,7 +149,7 @@ BONUS: Sets up styles for mobile breakpoint
 
   /* Defines mobile container content */
   .section-container {
-      background: lightskyblue; 
+      background: white; 
       margin-top: 60px;
       margin-left: 0px;
       height: 100%;
@@ -162,10 +165,7 @@ BONUS: Sets up styles for mobile breakpoint
       flex-wrap: wrap;
   }
 
-  #Logo .section-logo {
-      width: 300px; 
-      height: 100%;
-  }
+  
 
 
 }
@@ -195,14 +195,14 @@ Sets up styles for logos
 */
 
 .section-logo {
-  width: 400px;
-  height: 100%;
+  width: 30%;
+  height: 30%;
   padding: 25px;
 }
 
 .section-logo2 {
-  width: 400px;
-  height: 100%;
+  width: 30%;
+  height: 30%;
   background-color: #444645;
   padding: 25px;
   margin: 10px;
@@ -325,34 +325,35 @@ Sets up styles for button
 */
 
 .button button {
-  /* height: 40px;
-  width: 120px;
+  height: 50px;
+  width: 180px;
   border-radius: 4px;
   padding: 5px;
-  margin: 20px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight:600; */
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight:600; 
+  font-size: 16px;
 }
 
 .button-normal {
-  /* background: rgb(51, 51, 102);
-  color: rgb(255, 255, 255); */
+  background: #008BB7;
+  color: #FAF8F0; 
 }
 
 .button-hover {
-  /* background: rgb(215, 215, 215);
-  color: rgb(51, 51, 102); */
+  background: #00C3FF;
+  color: #FAF8F0; 
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
 }
 
 .button-pressed,
 .button-loading {
-  /* background:rgb(215, 215, 215);
-  color:rgb(51, 51, 102);
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.4); */
+  background: #004760; 
+  color: #FAF8F0;
 }
 
 .button-disabled {
-  /* good to go or make a custom disabled state */
+  color: #004760;
 }
 
 /* 
@@ -362,7 +363,7 @@ PSEUDO-CLASSES: VIEW SLIDES 58-63
 */
 
 .button:hover {
-  /* color: magenta; */
+  color: magenta;
 }
 
 /* 
@@ -376,32 +377,13 @@ https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fo
 */
 
 .imls-icons {
+  width: 100%;
   height: 40px;
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
 }
 
-/* USPS iconography */
-.usps-icons i {
-  /* margin-top: 40px;
-  font-size: 30px;
-  color:rgb(51, 51, 102); */
-}
 
-.svg-icons img {
-  /* margin-top: 40px;
-  width: 100px;
-  height: 100px; */
-}
-
-/* footer iconography */
-.social-icons i {
-  /* font-size: 44px;
-  color:tomato; */
-}
-
-.social-icons i:hover {
-  /* color: magenta; */
-}
 
 /* 
 ===========================
@@ -410,17 +392,46 @@ Sets up styles for images
 */
 
 #Imagery img {
-  /* padding: 10px; */
+  padding: 10px;
+  width: 50%;
 }
+
+.imls-img {
+  display: flex;
+  justify-content: space-around;
+  align-items:  center;
+}
+
 
 /* 
 ====================================
 Sets up styles for articles
 ====================================
 */
-article {
-  /* margin-top: 40px;
-  margin-bottom: 60px; */
+#Footer {
+  background-color: #444645;
+  color: #FAF8F0;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.social-img {
+  width: 25px;
+  height: 100%;
+  padding: 20px 10px;
+}
+
+.row-footer {
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
 }
 
 /* Copyright Trilogy Education Services © 2018. All Rights Reserved */
